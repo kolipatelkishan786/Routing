@@ -8,7 +8,7 @@ import {ActivatedRoute, Router} from '@angular/router';
   styleUrls: ['./servers.component.scss']
 })
 export class ServersComponent implements OnInit {
-  private servers: {id: string, name: string, status: string}[] = [];
+  private servers: {id: number, name: string, status: string}[] = [];
   constructor(private serversService: ServersService,
               private router: Router,
               private route: ActivatedRoute) {
