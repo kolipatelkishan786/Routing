@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {ServersService} from '../servers.service';
 
@@ -8,12 +8,13 @@ import {ServersService} from '../servers.service';
   styleUrls: ['./edit-server.component.scss']
 })
 export class EditServerComponent implements OnInit {
-  server: {id: number, name: string, status: string};
+  server: { id: number, name: string, status: string };
   serverName = '';
   serverStatus = '';
 
   constructor(private serversService: ServersService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
     console.log(this.route.snapshot.queryParams);
@@ -24,6 +25,7 @@ export class EditServerComponent implements OnInit {
     this.serverName = this.server.name;
     this.serverStatus = this.server.status;
   }
+
   onUpdateServer() {
     this.serversService.updateServer(this.server.id, {name: this.serverName, status: this.serverStatus});
   }
