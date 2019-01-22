@@ -24,7 +24,6 @@ const appRoutes: Routes = [
       {path: ':id/edit', component: EditServerComponent},
     ]
   }
-
 ];
 
 @NgModule({
